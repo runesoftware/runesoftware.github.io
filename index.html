@@ -84,12 +84,14 @@ body.dark #logo {
 <div id="preload"></div>
 <script>
 const body = document.getElementsByTagName('body')[0];
-function toggleDark() {
+function toggleDark(event) {
+    event.preventDefault();
     body.className = body.className !== 'dark' ? 'dark' : '';
+    return false;
 }
 const logo = document.getElementById('logo');
 logo.addEventListener('click', toggleDark);
-logo.addEventListener('touch', toggleDark);
+logo.addEventListener('touchend', toggleDark);
 </script>
 </body>
 </html>
