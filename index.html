@@ -48,6 +48,11 @@ body.dark a:visited {
 body.dark #logo {
     content: url("logo inverted.png");
 }
+#preload {
+    width: 0;
+    height: 0;
+    background: url("logo inverted.png") no-repeat -9999px -9999px;
+}    
 </style>
 </head>
 <body>
@@ -76,11 +81,15 @@ body.dark #logo {
 <hr><h2>Epilogue</h2>
 <p>Inspired by the geniuses behind <a href="http://motherfuckingwebsite.com/">motherfuckingwebsite.com</a> and <a href="http://txti.es">txti</a>.</p>
 <p>This page&mdash;that isn't a total fucking eyesore&mdash;was created by <a href="https://twitter.com/drew_mc">me</a> with help from <a href="https://twitter.com/gabehammersmith">him</a>.
+<div id="preload"></div>
 <script>
 const body = document.getElementsByTagName('body')[0];
-document.getElementById('logo').addEventListener('click', function() {
+function toggleDark() {
     body.className = body.className !== 'dark' ? 'dark' : '';
-});
+}
+const logo = document.getElementById('logo');
+logo.addEventListener('click', toggleDark);
+logo.addEventListener('touch', toggleDark);
 </script>
 </body>
 </html>
