@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Better Motherfucking Website</title>
+<title>Rune Software</title>
 <style type="text/css">
 body {
     max-width: 650px;
@@ -84,14 +84,11 @@ body.dark #logo {
 <div id="preload"></div>
 <script>
 const body = document.getElementsByTagName('body')[0];
-function toggleDark(event) {
-    event.preventDefault();
+function toggleDark() {
     body.className = body.className !== 'dark' ? 'dark' : '';
-    return false;
 }
-const logo = document.getElementById('logo');
-logo.addEventListener('click', toggleDark);
-logo.addEventListener('touchend', toggleDark);
+document.addEventListener('click', toggleDark);
+document.addEventListener('touchend', toggleDark);
 </script>
 </body>
 </html>
