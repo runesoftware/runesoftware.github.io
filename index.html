@@ -53,24 +53,6 @@ h1, h2, h3 {
 	    content: url("logo inverted.png");
     }
 }
-body.dark {
-    color: #eee;
-    background: #111;
-}
-body.dark a:link {
-    color: #5bf;
-}
-body.dark a:visited {
-    color: #ccf;
-}
-body.dark #logo {
-    content: url("logo inverted.png");
-}
-#preload {
-    width: 0;
-    height: 0;
-    background: url("logo inverted.png") no-repeat -9999px -9999px;
-}    
 </style>
 </head>
 <body>
@@ -101,14 +83,5 @@ body.dark #logo {
 <footer>
     <p id="copyright">Copyright &copy; 2020 Rune Software</p>
 </footer>
-<div id="preload"></div>
-<script>
-const body = document.getElementsByTagName('body')[0];
-function toggleDark() {
-    body.className = body.className !== 'dark' ? 'dark' : '';
-}
-document.addEventListener('click', toggleDark);
-document.addEventListener('touchend', toggleDark);
-</script>
 </body>
 </html>
